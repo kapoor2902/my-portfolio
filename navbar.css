@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+.navbar{
+    background-color: #344a64;
+    
+
+    
+z-index: -1;
+    font-family: 'Baloo 2', cursive;
+}
+.nav-link{
+    color: white !important;
+}
+
+.navbar img{
+    height: 65px;
+    width: 90px; 
+    position: relative;
+    top: 0.1rem;    
+}
+
+.navbar-toggler  {
+    padding: 1rem 1rem !important;
+    position: relative !important;
+    font-size: 1.25rem !important;
+    right: 10px !important;
+    line-height: 1 !important;
+    background-color: #030203 !important;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: box-shadow .15s ease-in-out;
+}
