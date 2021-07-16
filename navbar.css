@@ -1,31 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+
+
 .navbar{
-    background-color: #344a64;
+    background-color: #0a192fd9;
+    
+padding: auto;
     
 
-    
-z-index: -1;
     font-family: 'Baloo 2', cursive;
 }
 .nav-link{
-    color: white !important;
+    color: white !important; 
+    font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin-right: 1rem;
+
 }
 
-.navbar img{
-    height: 65px;
-    width: 90px; 
+.navbar-brand{
+    height: 1svh;
+    width: 4vw;
     position: relative;
-    top: 0.1rem;    
+    top: 1rem;
 }
 
 .navbar-toggler  {
-    padding: 1rem 1rem !important;
-    position: relative !important;
-    font-size: 1.25rem !important;
+    padding: 0.8rem 0.8rem !important;
+   
     right: 10px !important;
-    line-height: 1 !important;
-    background-color: #030203 !important;
+    
+    background-color: #b90e94 !important;
     border: 1px solid transparent;
     border-radius: .25rem;
     transition: box-shadow .15s ease-in-out;
+    margin-bottom: 10px;
 }
+.nav-link:hover{
+    color:rgb(20, 243, 243) !important;
+    
+}
+.titleholder{
+    background-color: #030203;
+   text-align: center;
+}
+.titleholder hr{
+    width: 63%;
+  fill: white;
+  opacity: 200%;
+    color: white;
+    border: 3px solid white;
+    position: absolute;
+    top: 70%;
+left:18%;
+  
+}
+.titleholder h1{
+  color: rgb(255, 255, 255);
+  position:absolute;
+top: 78%;
+left:45%;
+  font-size: 70px;
+  z-index: 2;
+}
+#logo {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+    -webkit-animation: fill 3s ease forwards 7s;
+            animation: fill 3s ease forwards 7s;
+  }
+  
+  
+#logo path:nth-child(1) {
+    stroke-dasharray: 535.4569396972656;
+    stroke-dashoffset: 535.4569396972656;
+    
+            animation: line-anim 10s ease forwards !important;
+  } 
+
+  @-webkit-keyframes line-anim {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes line-anim {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @-webkit-keyframes fill {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: white;
+    }
+  }
+  
+  @keyframes fill {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: white;
+    }
+  }
+  .profile{
+    position: relative;
+    top: 10rem;
+    left:2.1rem;
+  }
+  .profile h1{
+    text-align: center;
+    
+  }
