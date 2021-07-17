@@ -178,3 +178,25 @@ font-size: 3rem;
     font-size: 1.5rem;
     text-shadow: 1px 1px gray;
   }
+  .skills{
+    background-color: #ffffff;
+background-image: url("images/2126.jpg");
+background-attachment: fixed;
+background-size: cover;
+padding: 3rem;
+  }
+  .skills h1{
+    color: white;
+  }
+  .skills hr{
+    width: 19%;
+    margin-left:40.9%;
+    fill: grey;
+    opacity: 200%;
+    color:grey !important;
+    border: 2px solid grey; 
+  }
+  .skills .row{
+margin-left:3% !important ;
+margin-top: 100px;
+  }
