@@ -183,7 +183,7 @@ font-size: 3rem;
 background-image: url("images/2126.jpg");
 background-attachment: fixed;
 background-size: cover;
-padding: 3rem;
+padding: 10rem;
   }
   .skills h1{
     color: white;
@@ -197,6 +197,16 @@ padding: 3rem;
     border: 2px solid grey; 
   }
   .skills .row{
-margin-left:3% !important ;
+/* margin-left:3% !important ; */
 margin-top: 100px;
+  }
+  .skills svg{
+    width: 50%;
+  }
+  .skills h1{
+    color: #da0505 !important;
+  
+font-family: 'Lilita One', cursive;
+text-shadow: 1px 1px rgb(0, 0, 0);
+font-size: 5rem;
   }
