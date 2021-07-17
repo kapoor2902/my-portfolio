@@ -10,4 +10,4 @@ function disappear(){
  
     document.getElementById("background").style.display="none";
  
-},1000);
+},3000);
