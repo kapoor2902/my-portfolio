@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+.h1 span {
+    display: block;
+    background: rgba(0, 0, 0, 1);
+    padding: 0 20px;
+    font-size: 2em;
+    line-height: 44px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    float: inherit;
+    letter-spacing: 1px;
+    -webkit-column-rule-style: solid;
+    -o-column-rule-style: solid;
+    -moz-column-rule-style: solid;
+    -ms-column-rule-style: solid;
+    column-rule-style: solid;
+    text-transform: none;
+    font-family: "Raleway";
+    font-weight: 100;
+    font-style: normal;
+    font-variant: small-caps;
+    border-width: 5px;
+    border-radius: 50px;
+    font-family: 'Lilita One', cursive !important;
+    border-color: black;
+  }
+  
+  
+  .skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    
+    width: 80%;
+    background: #eee;
+    height: 50px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 30px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -ms-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+  }
+  
+  .skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    background: #6adcfa;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+  }
+  
+  .skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 8px 30px;
+    height: 50px;
+    line-height: 35px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-radius: 50px;
+    width: fit-content;
+  }
+  
+  .skillbar-bar {
+    height: 50px;
+    width: 0px;
+    background: #6adcfa;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 30px;
+  }
+  
+  .skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+   
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #000000;
+    text-shadow: #000000 !important;
+  }
+  .skillratings{
+      margin-left: -100px;
+      padding: 5rem;
+  }
+  .skillratings h1{
+    font-family: 'Lilita One', cursive !important;
+    padding: 2rem;
+    text-align: center;
+    font-size: 65px;
+    margin-left: 5rem;
+}
