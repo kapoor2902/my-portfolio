@@ -10,6 +10,9 @@
 body::-webkit-scrollbar {
   display: none;
 }
+.titleholder img{
+  display: flex;
+}
 
 .navbar{
     background-color: #0a192fd9;
@@ -210,4 +213,12 @@ font-family: 'Lilita One', cursive;
 text-shadow: 1px 1px rgb(0, 0, 0);
 font-size: 5rem;
   }
-  
+  .myed{
+    padding: 5rem;
+  }
+  .myed h1{
+    color: #0cb2f3;
+font-family: 'Lilita One', cursive;
+text-shadow: 3px 1px black;
+font-size: 5rem !important;
+  }
