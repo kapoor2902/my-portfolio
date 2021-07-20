@@ -156,7 +156,7 @@ left:44%;
   padding: 5rem;
   }
   .prof-heading{
-color: #0cb2f3;
+color: #000000;
 font-family: 'Lilita One', cursive;
 text-shadow: 3px 1px grey;
 font-size: 5rem !important;
@@ -243,15 +243,6 @@ font-size: 5rem !important;
   width: 700px;
 }
 
-.card-1 {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-b
-  ezier(.25,.8,.25,1);
-}
-
-.card-1:hover {
-  box-shadow: 0 14px 28px rgba(6, 145, 145, 0.25), 0 10px 10px rgba(7, 212, 226, 0.22);
-}
 .edhead{
   color: #000000;
   font-family: 'Lilita One', cursive;
@@ -269,6 +260,7 @@ font-size: 5rem !important;
   margin: 0 auto;
   margin-top: 20px;
   padding: 1em 0;
+
   list-style-type: none;
 }
 
@@ -330,7 +322,7 @@ font-size: 5rem !important;
   background: rgb(248,248,248);
   padding: 6px 10px;
   border-radius: 5px;
-  
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
   text-align: left;
 }
@@ -359,7 +351,7 @@ font-size: 5rem !important;
   margin-top: -10px;
   background: #fff;
   border-radius: 10px;
-  border: 4px solid rgb(255,80,80);
+  border: 4px solid rgb(233, 8, 165);
   z-index: 10;
 }
 
@@ -415,12 +407,14 @@ font-size: 5rem !important;
 .time {
   display: inline-block;
   padding: 4px 6px;
+  font-family: 'Josefin Sans', sans-serif;
   background: rgb(248,248,248);
 }
 
 .desc {
   margin: 1em 0.75em 0 0;
-  
+  font-family: 'Josefin Sans', sans-serif;
+
   font-size: 0.77777em;
   font-style: italic;
   line-height: 1.5em;
@@ -490,6 +484,7 @@ font-size: 5rem !important;
 	border-width: 8px;
 	pointer-events: none;
 }
+
 .school b{
   text-decoration: none;
   color: lightseagreen;
@@ -540,5 +535,25 @@ font-size: 5rem !important;
 }
 
 }
+.projects h1{
+  color: #000000;
+font-family: 'Lilita One', cursive;
+text-shadow: 3px 1px grey;
+font-size: 5rem !important;
+}
 
+.projects {
+  margin: 0;
+  padding: 100px;
+  background: rgb(255, 255, 255);
+  
+  color: rgb(50,50,50);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 112.5%;
+  line-height: 1.6em;
+}
+.projects li{
+  font-size: 140%;
+  padding: 6.2rem;
+}
 

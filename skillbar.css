@@ -130,11 +130,11 @@
 }
 .myed {
   margin: 0;
-  padding: 0;
+  padding: 100px;
   background: rgb(230,230,230);
   
   color: rgb(50,50,50);
   font-family: 'Open Sans', sans-serif;
-  font-size: 112.5%;
+  font-size: 125.5%;
   line-height: 1.6em;
 }
