@@ -554,6 +554,90 @@ font-size: 5rem !important;
 }
 .projects li{
   font-size: 140%;
-  padding: 6.2rem;
+  padding: 1rem;
 }
 
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icons a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 19px;
+  font-family: Oswald, sans-serif;
+  margin: 1px;
+  text-align: right;
+  border-radius: 0px 50px 50px 0px;
+  transform: translate(-119px, 0px);
+  transition: 1s;
+}
+.linkedin {
+  background-color: #0e76a8;
+  color: white;
+}
+.github {
+  background-color: black;
+  color: white;
+}
+.instagram {
+  background-color: #dd2a7b;
+  color: white;
+}
+.icons i{
+font-size: 110%;
+}
+footer {
+  margin-top: 5em !important;
+  text-align: center;
+  padding: 0rem 5rem 5rem 5rem !important;
+  background-color: #000000;
+  color: white;
+  position: relative;
+}
+.back-to-top i {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-bottom: 0;
+  animation: up 2s infinite;
+  text-decoration: none;
+}
+.footer_title {
+  font-size: 1.6em;
+  font-weight: 800;
+  text-align: left;
+}
+
+.footer_content {
+  text-align: left;
+  text-align: justify;
+}
+.linkedin2 {
+ 
+  color: #0e76a8;
+ 
+padding: 1em;
+
+}
+.github2 {
+ 
+  color: white;
+  padding: 1em;
+}
+.instagram2 {
+ padding: 1em;
+  color: #dd2a7b;
+}
+.footer_content{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: large;
+}
