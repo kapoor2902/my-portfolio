@@ -195,6 +195,7 @@ background-image: url("images/2126.jpg");
 background-attachment: fixed;
 background-size: cover;
 padding: 10rem;
+backdrop-filter: blur(100px);
   }
   .skills h1{
     color: white;
@@ -648,4 +649,11 @@ padding: 1em;
 .footer_content{
   font-family: 'Josefin Sans', sans-serif;
   font-size: large;
+}
+@media screen and (max-width:1300px){
+  #logo{
+    width: 70% !important;
+    height: 70% !important;
+  }
+  
 }
