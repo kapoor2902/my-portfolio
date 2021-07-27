@@ -2,10 +2,7 @@ body{
     margin:0;
     
   }
-  @font-face {
-    font-family: POLYA;
-    src: url(POLYA.otf) format("opentype");
-  }
+ 
   #background{
     display:block;
     position:fixed;
