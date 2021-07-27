@@ -5,7 +5,13 @@
 
   margin: 0;
   padding: 0;
+  overflow: inherit;
 
+}
+@font-face {
+  font-family: POLYA;
+  font-weight: bold;
+  src: url(POLYA.otf) format("opentype");
 }
 body::-webkit-scrollbar {
   display: none;
@@ -13,13 +19,16 @@ body::-webkit-scrollbar {
 .titleholder img{
   display: flex;
 }
-
+h1{
+  font-family: "POLYA";
+  font-size: 200%;
+}
 .navbar{
     background-color: #0a192fd9;
     
 padding: auto;
     position: fixed !important;
-z-index: 2;
+z-index: 100;
 width: 100vw;
     font-family: 'Baloo 2', cursive;
 }
@@ -41,7 +50,8 @@ width: 100vw;
    
     right: 0.8rem !important;
     
-    background-color: #b90e94 !important;
+    background-color: #1d56d3 !important;
+    backface-visibility: 50%;
     border: 0.063rem solid transparent;
     border-radius: .25rem;
     transition: box-shadow .15s ease-in-out;
@@ -56,25 +66,78 @@ width: 100vw;
    text-align: center;
 }
 .titleholder hr{
-    width: 63%;
-  fill: white;
+    
+  
   opacity: 200%;
     color: white;
     border: 0.188rem solid white;
-    position: absolute;
-    top: 70%;
-left:18%;
+   
   
 }
-.titleholder h1{
-  color: rgb(255, 255, 255);
-  position:absolute;
-top: 78%;
-left:44%;
-  font-size: 4.375rem;
+.direction-l .desc, .direction-r .desc {
+  position: relative;
+  margin: 1em 1em 0 1em;
+  padding: 1em;
+  z-index: 0 !important;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 0.375rem;
+  height: 100%;
+  margin-left: -0.188rem;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  z-index: 0 !important;
+}
+.flag{
+  z-index:0;
+  padding: 0 !important;
+}
+.titleholder .name{
 
+font-weight: bold;
+  font-size: 72px;
+  border: rgb(96, 228, 35);
+  
+  background: -webkit-linear-gradient(rgb(255, 230, 0), rgb(145, 255, 0));
+  -webkit-background-clip:text;
+  
+  -webkit-text-fill-color: rgb(255, 230, 0) ;
+  -webkit-backdrop-filter:drop-shadow(200px);
+  -webkit-backdrop-fill-color: rgb(236, 49, 2) ;
+padding: 100px;
+  font-size: 10.375rem;
+
+padding-top:380px ;
  
 }
+.titleholder .resume{
+  font-size: 6.375rem;
+  margin-top: -100px;
+}
+.titleholder{
+  background-color: #ffffff;
+  background-image: url("images/biker-minimal-4k-of.jpg");
+background-attachment: fixed;
+
+background-repeat:unset;
+background-position: 100px;
+width: 100vw;
+height: 100vh;
+  background-size:contain;
+
+
+}
+
 .titleholder h1 a{
   text-decoration: none;
   color:aliceblue;
@@ -83,9 +146,9 @@ left:44%;
 color: cyan;
 }
 #logo {
-    position: absolute;
-    top: 60%;
-    left: 50%;
+  
+
+   overflow: hidden;
     -webkit-transform: translate(-50%, -50%) !important;
             transform: translate(-50%, -50%) !important;
     -webkit-animation: fill 3s ease forwards 7s;
@@ -190,10 +253,10 @@ font-size: 3rem;
     text-shadow: 0.063rem 0.063rem gray;
   }
   .skills{
-    background-color: #ffffff;
-background-image: url("images/2126.jpg");
-background-attachment: fixed;
-background-size: cover;
+    background-color: #000000;
+
+background-attachment:scroll;
+background-size: contain;
 padding: 10rem;
 backdrop-filter: blur(100px);
   }
@@ -209,11 +272,11 @@ backdrop-filter: blur(100px);
     border: 0.125rem solid grey; 
   }
   .skills .row{
-/* margin-left:3% !important ; */
+
 margin-top: 6.25rem;
   }
-  .skills svg{
-    width: 50%;
+  .skill svg{
+    size: 50%;
   }
   .skills h1{
     color: #da0505 !important;
@@ -228,7 +291,7 @@ font-size: 5rem;
   .myed h1{
     color: #000000;
 font-family: 'Lilita One', cursive;
-text-shadow: 0.188rem 0.063rem black;
+text-shadow: 0.188rem 0.063rem rgb(59, 56, 56);
 font-size: 5rem !important;
   }
 
@@ -435,7 +498,7 @@ font-size: 5rem !important;
 
 /* ================ Timeline Media Queries ================ */
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 767px) {
 
 .timeline {
  	width: 100%;
@@ -650,10 +713,966 @@ padding: 1em;
   font-family: 'Josefin Sans', sans-serif;
   font-size: large;
 }
-@media screen and (max-width:1300px){
-  #logo{
-    width: 70% !important;
-    height: 70% !important;
+/*fold*/
+@media screen and (max-width:340px) and (max-height:700px){
+  .titleholder{
+  
+   background-color: #030203;
+  width: 100vw;
+  height: 70vh;
+ background-size: 350%;
+background-position: -400px;
+margin-bottom: -100px;
   }
   
+  .myed h1 {
+    color: #000000;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0.188rem 0.063rem rgb(73, 65, 65);
+    font-size: 3rem !important;
+    letter-spacing: 0.2rem;
+    margin-left: -78px !important;
+}
+.timeline {
+ size: 50%;
+}
+.skillratings h1 {
+  font-family: 'Lilita One', cursive !important;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-left: 5rem;
+}
+.skills {
+  background-color: #000000;
+ 
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  padding: 2rem 0rem 2rem 0rem;
+}
+.skills i{
+  margin: 2rem;
+}
+
+.projects h1 {
+  color: #000000;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.188rem 0.063rem grey;
+  font-size: 3rem !important;
+  margin-left: -15px;
+}
+.projects li {
+  font-size: 80%;
+  padding: 1rem;
+  margin-left: -50px;
+}
+.resume{
+  display: none;
+
+}
+.titleholder .name{
+  color: rgb(255, 255, 255);
+  position:relative;
+padding-top: 200px;
+margin-left: -100px;
+padding-bottom: 15px;
+justify-content: center;
+  font-size: 3.3rem;
+
+ 
+}
+h3{
+ font-size: 0.2rem;
+  
+}
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 11.25rem;
+  display: none;
+  flex-direction: column;
+}
+.skills i{
+  font-size: 700%;
+  padding: 13px;
+}
+.footer_content p{
+  margin-left: -70px;
+}
+.desc {
+  margin: 1em 0.75em 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 2em;
+  width: 9rem;
+}
+.skills h1 {
+  color: #da0505 !important;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.063rem 0.063rem rgb(0 0 0);
+  font-size: 3rem;
+}
+.footer_content{
+  margin-left: -30px;
+}
+
+.profile h1 {
+ font-size: 2.8rem !important;
+ margin-left: -1rem;
+}
+.aboutme{
+  font-size: 1.2rem;
+  margin-left:-1rem ;
+}
+
+.detail-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.063rem 0.063rem grey;
+}
+.detail-head{
+  font-size: 2.2rem;
+}
+.time{
+  z-index: 0 !important;
+}
+.flag{
+  z-index: 0;
+}
+.githubrepo{
+  font-size: 1.2rem;
+}
+}
+/*surface duo */
+@media screen and (min-width:530px ) and (max-width:700px){
+  .titleholder{
+  
+   background-color: #030203;
+  width: 100vw;
+  height: 100vh;
+ background-size: 150%;
+background-position: -400px;
+margin-bottom: -100px;
+
+  }
+  .titleholder name{
+  font-size: 5rem;
+  }
+  
+  .myed h1 {
+    color: #000000;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0.188rem 0.063rem rgb(73, 65, 65);
+    font-size: 3rem !important;
+    letter-spacing: 0.2rem;
+    margin-left: -78px !important;
+}
+.timeline {
+ size: 50%;
+}
+.skillratings h1 {
+  font-family: 'Lilita One', cursive !important;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-left: 5rem;
+}
+.skills {
+  background-color: #000000;
+  
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  padding: 2rem 0rem 2rem 0rem;
+}
+.skills i{
+  margin: 2rem;
+}
+
+.projects h1 {
+  color: #000000;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.188rem 0.063rem grey;
+  font-size: 3rem !important;
+  margin-left: -15px;
+}
+.projects li {
+  font-size: 80%;
+  padding: 1rem;
+  margin-left: -50px;
+}
+.titleholder .resume{
+ font-size: 2rem;
+
+}
+.titleholder .name{
+  color: rgb(255, 255, 255);
+  position:relative;
+padding-top: 200px;
+margin-left: -50px;
+padding-bottom: 15px;
+justify-content: center;
+  font-size: 3.8rem;
+
+ 
+}
+h3{
+ font-size: 0.2rem;
+  
+}
+.i{
+  padding: 50px;
+}
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 11.25rem;
+  display: none;
+  flex-direction: column;
+}
+.skills i{
+  font-size: 700%;
+  padding: 120px;
+}
+.footer_content p{
+  margin-left: -70px;
+}
+.desc {
+  margin: 1em 0.75em 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 2em;
+  width: 9rem;
+}
+.skills h1 {
+  color: #da0505 !important;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.063rem 0.063rem rgb(0 0 0);
+  font-size: 3rem;
+}
+.footer_content{
+  margin-left: -30px;
+}
+
+.profile h1 {
+ font-size: 2.8rem !important;
+ margin-left: -1rem;
+}
+.aboutme{
+  font-size: 1.2rem;
+  margin-left:-1rem ;
+}
+
+.detail-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.063rem 0.063rem grey;
+}
+.detail-head{
+  font-size: 2.2rem;
+}
+.time{
+  z-index: 0 !important;
+}
+.flag{
+  z-index: 0;
+}
+.githubrepo{
+  font-size: 1.2rem;
+}
+}
+/*iphone x*/
+@media screen and (min-width:341px) and (max-width:377px){
+  .titleholder{
+  
+   background-color: #030203;
+  width: 100vw;
+  height: 70vh;
+ background-size: 350%;
+background-position: -400px;
+margin-bottom: -100px;
+  }
+  
+  .myed h1 {
+    color: #000000;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0.188rem 0.063rem rgb(73, 65, 65);
+    font-size: 3rem !important;
+    letter-spacing: 0.2rem;
+    margin-left: -78px !important;
+}
+.timeline {
+ size: 50%;
+}
+.skillratings h1 {
+  font-family: 'Lilita One', cursive !important;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-left: 5rem;
+}
+.skills {
+  background-color: #000000;
+  
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  padding: 2rem 0rem 2rem 0rem;
+}
+.skills i{
+  margin: 2rem;
+}
+
+.projects h1 {
+  color: #000000;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.188rem 0.063rem grey;
+  font-size: 3rem !important;
+  margin-left: -15px;
+}
+.projects li {
+  font-size: 80%;
+  padding: 1rem;
+  margin-left: -50px;
+}
+.resume{
+  display: none;
+
+}
+.titleholder .name{
+  color: rgb(255, 255, 255);
+  position:relative;
+padding-top: 200px;
+margin-left: -90px;
+padding-bottom: 15px;
+justify-content: center;
+  font-size: 4.3rem;
+
+ 
+}
+h3{
+ font-size: 0.2rem;
+  
+}
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 11.25rem;
+  display: none;
+  flex-direction: column;
+}
+.skills i{
+  font-size: 700%;
+  padding: 60px;
+}
+.footer_content p{
+  margin-left: -70px;
+}
+.desc {
+  margin: 1em 0.75em 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 2em;
+  width: 9rem;
+}
+.skills h1 {
+  color: #da0505 !important;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.063rem 0.063rem rgb(0 0 0);
+  font-size: 3rem;
+}
+.footer_content{
+  margin-left: -30px;
+}
+
+.profile h1 {
+ font-size: 2.8rem !important;
+ margin-left: -1rem;
+}
+.aboutme{
+  font-size: 1.2rem;
+  margin-left:-1rem ;
+}
+
+.detail-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.063rem 0.063rem grey;
+}
+.detail-head{
+  font-size: 2.2rem;
+}
+.time{
+  z-index: 0 !important;
+}
+.flag{
+  z-index: 0;
+}
+.githubrepo{
+  font-size: 1.2rem;
+}
+}
+/*iphone 6/7/8*/
+@media screen and (min-width:378px) and (max-width:530px){
+  .titleholder{
+  
+   background-color: #030203;
+  width: 100vw;
+  height: 70vh;
+ background-size: 350%;
+background-position: -400px;
+margin-bottom: -100px;
+  }
+  
+  .myed h1 {
+    color: #000000;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0.188rem 0.063rem rgb(73, 65, 65);
+    font-size: 3rem !important;
+    letter-spacing: 0.2rem;
+    margin-left: -78px !important;
+}
+.timeline {
+ size: 50%;
+}
+.skillratings h1 {
+  font-family: 'Lilita One', cursive !important;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-left: 5rem;
+}
+.skills {
+  background-color: #000000;
+  background-image: none;
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  padding: 2rem 0rem 2rem 0rem;
+}
+.skills i{
+  margin: 2rem;
+}
+
+.projects h1 {
+  color: #000000;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.188rem 0.063rem grey;
+  font-size: 3rem !important;
+  margin-left: -15px;
+}
+.projects li {
+  font-size: 80%;
+  padding: 1rem;
+  margin-left: -50px;
+}
+.resume{
+  display: none;
+
+}
+.titleholder .name{
+  color: rgb(255, 255, 255);
+  position:relative;
+padding-top: 200px;
+margin-left: -90px;
+padding-bottom: 15px;
+justify-content: center;
+  font-size: 4.8rem;
+
+ 
+}
+h3{
+ font-size: 0.2rem;
+  
+}
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 11.25rem;
+  display: none;
+  flex-direction: column;
+}
+.skills i{
+  font-size: 700%;
+  padding: 70px;
+}
+.footer_content p{
+  margin-left: -70px;
+}
+.desc {
+  margin: 1em 0.75em 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 2em;
+  width: 9rem;
+}
+.skills h1 {
+  color: #da0505 !important;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.063rem 0.063rem rgb(0 0 0);
+  font-size: 3rem;
+}
+.footer_content{
+  margin-left: -30px;
+}
+
+.profile h1 {
+ font-size: 2.8rem !important;
+ margin-left: -1rem;
+}
+.aboutme{
+  font-size: 1.2rem;
+  margin-left:-1rem ;
+}
+
+.detail-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.063rem 0.063rem grey;
+}
+.detail-head{
+  font-size: 2.2rem;
+}
+.time{
+  z-index: 0 !important;
+}
+.flag{
+  z-index: 0;
+}
+.githubrepo{
+  font-size: 1.2rem;
+}
+}
+/*iphone 6/7/8*/
+@media screen and (min-width:319px) and (max-width:321px){
+  .titleholder{
+  
+   background-color: #030203;
+  width: 100vw;
+  height: 70vh;
+ background-size: 350%;
+background-position: -400px;
+margin-bottom: -100px;
+  }
+  
+  .myed h1 {
+    color: #000000;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0.188rem 0.063rem rgb(73, 65, 65);
+    font-size: 3rem !important;
+    letter-spacing: 0.2rem;
+    margin-left: -78px !important;
+}
+.timeline {
+ size: 50%;
+}
+.skillratings h1 {
+  font-family: 'Lilita One', cursive !important;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-left: 5rem;
+}
+.skills {
+  background-color: #000000;
+ 
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  padding: 2rem 0rem 2rem 0rem;
+}
+.skills i{
+  margin: 2rem;
+}
+
+.projects h1 {
+  color: #000000;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.188rem 0.063rem grey;
+  font-size: 3rem !important;
+  margin-left: -15px;
+}
+.projects li {
+  font-size: 80%;
+  padding: 1rem;
+  margin-left: -50px;
+}
+.resume{
+  display: none;
+
+}
+.titleholder .name{
+  color: rgb(255, 255, 255);
+  position:relative;
+padding-top: 200px;
+margin-left: -90px;
+padding-bottom: 15px;
+justify-content: center;
+  font-size: 3.5rem;
+
+ 
+}
+h3{
+ font-size: 0.2rem;
+  
+}
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 11.25rem;
+  display: none;
+  flex-direction: column;
+}
+.skills i{
+  font-size: 700%;
+  padding: 10px;
+}
+.footer_content p{
+  margin-left: -70px;
+}
+.desc {
+  margin: 1em 0.75em 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 2em;
+  width: 9rem;
+}
+.skills h1 {
+  color: #da0505 !important;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.063rem 0.063rem rgb(0 0 0);
+  font-size: 3rem;
+}
+.footer_content{
+  margin-left: -30px;
+}
+
+.profile h1 {
+ font-size: 2.8rem !important;
+ margin-left: -1rem;
+}
+.aboutme{
+  font-size: 1.2rem;
+  margin-left:-1rem ;
+}
+
+.detail-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.063rem 0.063rem grey;
+}
+.detail-head{
+  font-size: 2.2rem;
+}
+.time{
+  z-index: 0 !important;
+}
+.flag{
+  z-index: 0;
+}
+.githubrepo{
+  font-size: 1.2rem;
+}
+}
+
+
+
+@media screen and (min-width:701px ) and (max-width:1000px){
+  .titleholder{
+  
+   background-color: #030203;
+  width: 100vw;
+  height: 100vh;
+ background-size: 120%;
+background-position: -400px;
+margin-bottom: -100px;
+
+  }
+  .titleholder name{
+  font-size: 5rem;
+  }
+  
+  .myed h1 {
+    color: #000000;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0.188rem 0.063rem rgb(73, 65, 65);
+    font-size: 3rem !important;
+    letter-spacing: 0.2rem;
+    margin-left: -78px !important;
+}
+.timeline {
+ size: 50%;
+}
+.skillratings h1 {
+  font-family: 'Lilita One', cursive !important;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-left: 5rem;
+}
+.skills {
+  background-color: #000000;
+
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  padding: 2rem 0rem 2rem 0rem;
+}
+.skills i{
+  margin: 2rem;
+}
+
+.projects h1 {
+  color: #000000;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.188rem 0.063rem grey;
+  font-size: 3rem !important;
+  margin-left: -15px;
+}
+.projects li {
+  font-size: 80%;
+  padding: 1rem;
+  margin-left: -50px;
+}
+.titleholder .resume{
+  font-size: 4rem;
+}
+.titleholder .name{
+  color: rgb(255, 255, 255);
+  position:relative;
+padding-top: 300px;
+margin-left: -30px;
+padding-bottom: 15px;
+justify-content: center;
+  font-size: 4.3rem;
+
+ 
+}
+h3{
+ font-size: 0.2rem;
+  
+}
+.i{
+  padding: 50px;
+}
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 11.25rem;
+  display: none;
+  flex-direction: column;
+}
+.skills i{
+  font-size: 700%;
+  padding: 120px;
+}
+.footer_content p{
+  margin-left: -70px;
+}
+.desc {
+  margin: 1em 0.75em 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 2em;
+  width: 9rem;
+}
+.skills h1 {
+  color: #da0505 !important;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.063rem 0.063rem rgb(0 0 0);
+  font-size: 3rem;
+}
+.footer_content{
+  margin-left: -30px;
+}
+
+.profile h1 {
+ font-size: 2.8rem !important;
+ margin-left: -1rem;
+}
+.aboutme{
+  font-size: 1.2rem;
+  margin-left:-1rem ;
+}
+
+.detail-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.063rem 0.063rem grey;
+}
+.detail-head{
+  font-size: 2.2rem;
+}
+.time{
+  z-index: 0 !important;
+}
+.flag{
+  z-index: 0;
+}
+.githubrepo{
+  font-size: 1.2rem;
+}
+}
+@media screen and (min-width:1001px ) and (max-width:1199px){
+  .titleholder{
+  
+   background-color: #030203;
+  width: 100vw;
+  height: 100vh;
+ background-size: 120%;
+background-position: -400px;
+margin-bottom: -100px;
+
+  }
+  .titleholder name{
+  font-size: 5rem;
+  }
+  
+  .myed h1 {
+    color: #000000;
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0.188rem 0.063rem rgb(73, 65, 65);
+    font-size: 3rem !important;
+    letter-spacing: 0.2rem;
+    margin-left: -78px !important;
+}
+.timeline {
+ size: 50%;
+}
+.skillratings h1 {
+  font-family: 'Lilita One', cursive !important;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.8rem !important;
+  margin-left: 5rem;
+}
+.skills {
+  background-color: #000000;
+
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  padding: 2rem 0rem 2rem 0rem;
+}
+.skills i{
+  margin: 2rem;
+}
+
+.projects h1 {
+  color: #000000;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.188rem 0.063rem grey;
+  font-size: 3rem !important;
+  margin-left: -15px;
+}
+.projects li {
+  font-size: 80%;
+  padding: 1rem;
+  margin-left: -50px;
+}
+.titleholder .resume{
+  font-size: 4rem;
+}
+.titleholder .name{
+  color: rgb(255, 255, 255);
+  position:relative;
+padding-top: 300px;
+margin-left: -30px;
+padding-bottom: 15px;
+justify-content: center;
+  font-size: 4.3rem;
+
+ 
+}
+h3{
+ font-size: 0.2rem;
+  
+}
+.i{
+  padding: 50px;
+}
+.icons {
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  left: 0%;
+  width: 11.25rem;
+  display: none;
+  flex-direction: column;
+}
+.skills i{
+  font-size: 700%;
+  padding: 120px;
+}
+.footer_content p{
+  margin-left: -70px;
+}
+.desc {
+  margin: 1em 0.75em 0 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 2em;
+  width: 9rem;
+}
+.skills h1 {
+  color: #da0505 !important;
+  font-family: 'Lilita One', cursive;
+  text-shadow: 0.063rem 0.063rem rgb(0 0 0);
+  font-size: 3rem;
+}
+.footer_content{
+  margin-left: -30px;
+}
+
+.profile h1 {
+ font-size: 2.8rem !important;
+ margin-left: -1rem;
+}
+.aboutme{
+  font-size: 1.2rem;
+  margin-left:-1rem ;
+}
+
+.detail-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 0.063rem 0.063rem grey;
+}
+.detail-head{
+  font-size: 2.2rem;
+}
+.time{
+  z-index: 0 !important;
+}
+.flag{
+  z-index: 0;
+}
+.githubrepo{
+  font-size: 1.2rem;
+}
+}
+@media screen and (max-width:568px){
+  h1{
+    size:50%;
+  }
 }
