@@ -107,16 +107,13 @@ width: 100vw;
 font-weight: bold;
   font-size: 72px;
   border: rgb(96, 228, 35);
-  
   background: -webkit-linear-gradient(rgb(255, 230, 0), rgb(145, 255, 0));
   -webkit-background-clip:text;
-  
   -webkit-text-fill-color: rgb(255, 230, 0) ;
   -webkit-backdrop-filter:drop-shadow(200px);
   -webkit-backdrop-fill-color: rgb(236, 49, 2) ;
 padding: 100px;
   font-size: 5.375rem;
-
 padding-top:281px ;
  
 }
