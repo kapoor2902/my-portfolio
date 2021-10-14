@@ -143,7 +143,9 @@ height: 100vh;
 color: cyan;
 }
 #logo {
-  
+position: absolute;
+top: 45%;
+width:70%;
 
    overflow: hidden;
     -webkit-transform: translate(-50%, -50%) !important;
@@ -152,7 +154,11 @@ color: cyan;
             animation: fill 3s ease forwards 7s;
   }
   
-  
+  #resume{
+    position:absolute;
+    top:60%;
+    left:35%;
+  }
 #logo path:nth-child(1) {
     stroke-dasharray: 535.4569396972656;
     stroke-dashoffset: 535.4569396972656;
@@ -1123,7 +1129,7 @@ h3{
 @media screen and (min-width:378px) and (max-width:530px){
   .titleholder{
   
-   background-color: #030203;
+  
   width: 100vw;
   height: 70vh;
  background-size: 350%;
@@ -1543,6 +1549,11 @@ margin-bottom: -100px;
   .titleholder name{
   font-size: 5rem;
   }
+  #logo{
+    width: 95%;
+position: absolute;  
+top: 46%;
+  }
   
   .myed h1 {
     color: #000000;
@@ -1671,5 +1682,12 @@ h3{
 @media screen and (max-width:568px){
   h1{
     size:50%;
+  }
+}
+@media screen and (max-width:1000px) {
+  #logo {
+    position: absolute;
+    top: 40%;
+    width:87%;
   }
 }
